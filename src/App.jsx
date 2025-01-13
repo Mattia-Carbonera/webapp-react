@@ -16,7 +16,7 @@ function App() {
         <Routes>
           <Route element={<DefaultLayout />}>
             <Route index Component={HomePage} />
-            <Route path="/detalist" Component={MovieDetalist} />
+            <Route path=":id" Component={MovieDetalist} />
           </Route>
         </Routes>
       </BrowserRouter>

@@ -32,16 +32,6 @@ export default function DefaultLayout() {
                     Home
                   </Link>
                 </li>
-
-                <li className="nav-item">
-                  <Link
-                    to={"/detalist"}
-                    className="nav-link active"
-                    aria-current="page"
-                  >
-                    Detalist
-                  </Link>
-                </li>
               </ul>
             </div>
           </div>
