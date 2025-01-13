@@ -15,15 +15,22 @@ export default function HomePage() {
 
   return (
     <main>
-      <h1>homepage</h1>
-      <div className="movie-list">
-        <ul>
-          {movies.map((movie) => (
-            <li key={movie.id}>
-              <Link to={"/detalis/" + movie.id}>{movie.title}</Link>
-            </li>
-          ))}
-        </ul>
+      <h1>Movies</h1>
+      <div className="movie-list-container">
+        <div className="movie-list">
+          <ol>
+            {movies.map((movie, id) => (
+              <>
+                <li key={id}>
+                  <Link className="movie-list-link" to={"/detalis/" + movie.id}>
+                    {movie.title}
+                  </Link>
+                </li>
+                <hr className="movie-list-hr" />
+              </>
+            ))}
+          </ol>
+        </div>
       </div>
     </main>
   );

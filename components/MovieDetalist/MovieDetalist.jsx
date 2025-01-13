@@ -11,16 +11,24 @@ export default function MovieDetalist() {
     fetch(urlFrontend)
       .then((res) => res.json())
       .then((data) => {
-        setMovie(data[0]);
+        setMovie(data);
       });
   }, []);
 
   return (
     <main>
       <h1>Movie Detail</h1>
-      <div className="movie-list">
-        <h2>{movie.title}</h2>
-        <p>{movie.abstract}</p>
+      <div className="movie-detalis-container">
+        <div className="movie-detalis">
+          {/* <h2>{movie[0].title}</h2> */}
+          <hr className="movie-detalis-hr" />
+          <h3>Review:</h3>
+          <ol className="reviews-list">
+            {movie.map((mov, id) => (
+              <li key={id}>{mov.text}</li>
+            ))}
+          </ol>
+        </div>
       </div>
     </main>
   );

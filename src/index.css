@@ -1,0 +1,65 @@
+/* * GENERAL */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* * MAIN */
+
+h1 {
+  padding: 2rem 0;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+/* * MOVIE LIST CONTAINER */
+.movie-list-hr {
+  max-width: 150px;
+}
+
+.movie-list-container {
+  text-align: center;
+}
+
+.movie-list {
+  display: inline-block;
+  text-align: center;
+
+  background-color: lightgray;
+  border: 1px solid gray;
+  border-radius: 10px;
+}
+
+.movie-list ol {
+  margin: 2rem 2rem 2rem 1rem;
+}
+
+.movie-list ol li {
+  margin: 0.5rem;
+}
+
+.movie-list-link {
+  text-decoration: none;
+  color: black;
+}
+
+/* * MOVIE DETALIS CONTAINER */
+.movie-detalis-container {
+  text-align: center;
+}
+
+.movie-detalis {
+  display: inline-block;
+  text-align: center;
+  padding: 2rem;
+
+  background-color: lightgray;
+  border: 1px solid gray;
+  border-radius: 10px;
+}
+
+.reviews-list {
+  text-align: left;
+}
