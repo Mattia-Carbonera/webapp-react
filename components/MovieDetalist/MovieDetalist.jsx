@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
+import Review from "../reusable/review";
 
 export default function MovieDetalist() {
   const [movie, setMovie] = useState([]);
@@ -23,15 +24,37 @@ export default function MovieDetalist() {
       <h1>Movie Detail</h1>
       <div className="movie-detalis-container">
         <div className="movie-detalis">
-          <h2>{movie?.length > 0 && movie[0].title}</h2>
-          <hr className="movie-detalis-hr" />
-          <h3>Review:</h3>
-          <ol className="reviews-list">
-            {movie.map((mov, id) => (
-              <li key={id}>{mov.text}</li>
-            ))}
-          </ol>
+          <div className="movie-image">
+            <img src={movie?.length > 0 && movie[0].image} alt="" />
+          </div>
+
+          <div className="movie-caption">
+            <h2>{movie?.length > 0 && movie[0].title}</h2>
+            <span>{movie?.length > 0 && movie[0].director}</span>
+            <hr className="movie-detalis-hr" />
+            <div className="movie-description">
+              <h4>Description:</h4>
+              <p>{movie?.length > 0 && movie[0].abstract}</p>
+            </div>
+            <hr className="movie-detalis-hr" />
+            <h4>Review:</h4>
+            <div className="card-reviews-container">
+              {movie.map((mov, id) => (
+                <Review
+                  key={id}
+                  name={mov.name}
+                  review={mov.text}
+                  vote={mov.vote}
+                />
+              ))}
+            </div>
+          </div>
         </div>
+      </div>
+      <div className="btn-back">
+        <Link to={"/"} className="btn btn-primary">
+          Indietro
+        </Link>
       </div>
     </main>
   );

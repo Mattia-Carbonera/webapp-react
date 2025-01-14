@@ -1,11 +1,11 @@
 import { Link, Outlet } from "react-router-dom";
-import MovieDetalist from "../MovieDetalist/MovieDetalist";
+// import MovieDetalist from "../MovieDetalist/MovieDetalist";
 
 export default function DefaultLayout() {
   return (
     <div>
       <header>
-        <nav className="navbar navbar-expand-lg bg-body-tertiary">
+        <nav className="navbar navbar-expand-lg bg-primary">
           <div className="container-fluid">
             <a className="navbar-brand" href="#">
               Movies

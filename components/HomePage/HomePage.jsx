@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import Card from "../reusable/Card";
 
 export default function HomePage() {
   const urlFrontend = "http://localhost:3000/db";
@@ -13,10 +14,25 @@ export default function HomePage() {
       });
   }, []);
 
+  //   console.log(movies);
+
   return (
     <main>
       <h1>Movies</h1>
-      <div className="movie-list-container">
+
+      <div className="card-container">
+        {movies.map((movie) => (
+          <Card
+            key={movie.id}
+            id={movie.id}
+            image={movie.image}
+            title={movie.title}
+            author={movie.director}
+          />
+        ))}
+      </div>
+
+      {/* <div className="movie-list-container">
         <div className="movie-list">
           <ol>
             {movies.map((movie, id) => (
@@ -31,7 +47,7 @@ export default function HomePage() {
             ))}
           </ol>
         </div>
-      </div>
+      </div> */}
     </main>
   );
 }
