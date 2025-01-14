@@ -5,7 +5,7 @@ export default function DefaultLayout() {
   return (
     <div>
       <header>
-        <nav className="navbar navbar-expand-lg bg-primary">
+        <nav className="navbar navbar-expand-lg">
           <div className="container-fluid">
             <a className="navbar-brand" href="#">
               Movies

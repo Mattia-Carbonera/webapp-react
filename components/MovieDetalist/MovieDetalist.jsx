@@ -52,7 +52,7 @@ export default function MovieDetalist() {
         </div>
       </div>
       <div className="btn-back">
-        <Link to={"/"} className="btn btn-primary">
+        <Link to={"/"} className="btn btn-secondary">
           Indietro
         </Link>
       </div>

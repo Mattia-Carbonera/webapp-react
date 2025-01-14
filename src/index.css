@@ -6,6 +6,18 @@
   padding: 0;
 }
 
+html {
+  background-color: #f4f1e9;
+}
+
+main {
+  background-color: #f4f1e9;
+}
+
+.navbar {
+  background-color: #e4cba8;
+}
+
 /* * MAIN */
 
 h1 {
@@ -112,6 +124,7 @@ main {
 
 .movie-caption {
   padding: 0.5rem;
+  max-width: 470px;
 }
 
 .movie-description {
