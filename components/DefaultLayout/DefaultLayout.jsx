@@ -32,6 +32,15 @@ export default function DefaultLayout() {
                     Home
                   </Link>
                 </li>
+                <li className="nav-item">
+                  <Link
+                    to={"/movies"}
+                    className="nav-link active"
+                    aria-current="page"
+                  >
+                    Movies
+                  </Link>
+                </li>
               </ul>
             </div>
           </div>

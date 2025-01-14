@@ -8,6 +8,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import DefaultLayout from "../components/DefaultLayout/DefaultLayout";
 import HomePage from "../components/HomePage/HomePage";
 import MovieDetalist from "../components/MovieDetalist/MovieDetalist";
+import Index from "../components/index";
 
 function App() {
   return (
@@ -15,8 +16,9 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route element={<DefaultLayout />}>
-            <Route index Component={HomePage} />
-            <Route path="detalis/:id" Component={MovieDetalist} />
+            <Route index Component={Index} />
+            <Route path="movies/" Component={HomePage} />
+            <Route path="movies/detalis/:id" Component={MovieDetalist} />
           </Route>
         </Routes>
       </BrowserRouter>

@@ -26,6 +26,35 @@ h1 {
   text-align: center;
 }
 
+/* * INDEX */
+.backgrownd-image {
+  width: 100%;
+}
+
+.backgrownd-image img {
+  width: 100%;
+}
+
+.start-watching {
+  cursor: pointer;
+
+  background-color: #e4cba8;
+  padding: 1rem 2rem;
+  border: 1px solid #e4cba8;
+  border-radius: 10px;
+
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 1.5rem;
+
+  margin-top: 2rem;
+}
+
+.start-watching:hover {
+  background-color: #c4a47b;
+}
+
 /* * CARD */
 .card-container {
   display: flex;
