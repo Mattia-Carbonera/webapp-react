@@ -7,7 +7,7 @@ export default function Index() {
     <main>
       <h1>Benvenuti nel mondo dello spettacolo</h1>
       <div className="backgrownd-image">
-        <img src="public/img/films.jpg" alt="" />
+        <img src="/img/films.jpg" alt="" />
       </div>
 
       <div className="index-content text-center">
