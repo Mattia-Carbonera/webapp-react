@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import Review from "../reusable/review";
+import ReviewsForm from "../reusable/reviewsForm";
 
 export default function MovieDetalist() {
   const [movie, setMovie] = useState([]);
@@ -17,7 +18,7 @@ export default function MovieDetalist() {
       });
   }, []);
 
-  console.log(movie);
+  //   console.log(movie);
 
   return (
     <main>
@@ -26,6 +27,7 @@ export default function MovieDetalist() {
         <div className="movie-detalis">
           <div className="movie-image">
             <img src={movie?.length > 0 && movie[0].image} alt="" />
+            <ReviewsForm />
           </div>
 
           <div className="movie-caption">

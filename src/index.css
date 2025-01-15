@@ -143,6 +143,7 @@ main {
 .movie-image {
   display: flex;
   align-items: center;
+  flex-direction: column;
 }
 
 .movie-detalis img {
@@ -168,6 +169,14 @@ main {
 
 .reviews-list {
   text-align: left;
+}
+
+/* reviews form creatore */
+.reviews-form-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 /* reviews card */
