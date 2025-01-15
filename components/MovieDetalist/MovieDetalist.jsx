@@ -27,7 +27,7 @@ export default function MovieDetalist() {
         <div className="movie-detalis">
           <div className="movie-image">
             <img src={movie?.length > 0 && movie[0].image} alt="" />
-            <ReviewsForm />
+            <ReviewsForm id={movieId} />
           </div>
 
           <div className="movie-caption">

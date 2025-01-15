@@ -1,15 +1,33 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 
-export default function ReviewsForm() {
+export default function ReviewsForm({ id }) {
   const [newReview, setNewReview] = useState({
     name: "",
     vote: "",
     text: "",
   });
 
+  // * EXECUTING FETCH FOR POST
+  const urlFrontend = "http://localhost:3000/db/add-review/" + id.id;
+
+  function fetchPost() {
+    fetch(urlFrontend, {
+      method: "POST",
+      body: JSON.stringify(newReview),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        // console.log(data);
+      });
+  }
+
+  //   * MAKE A HANDLER OF FORM AND INPUT
   const reviewsformHandler = (e) => {
     e.preventDefault();
     console.log(newReview);
+
+    fetchPost();
   };
 
   const inputReviewsFormHandler = (e) => {
@@ -22,7 +40,7 @@ export default function ReviewsForm() {
   return (
     <>
       <h3 className="reviews-form-title mt-5">Add review:</h3>
-      <form className="reviews-form-container" onClick={reviewsformHandler}>
+      <form className="reviews-form-container" onSubmit={reviewsformHandler}>
         <div className="name-form-container m-2">
           {/* <label htmlFor="name">Name</label> */}
           <input
